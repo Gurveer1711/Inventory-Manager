@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+
+
+<GridPane id="GridPane" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sin11368.InventoryFXMLController">
+    
+    <children>
+        <Label text="Inventory Tracker" GridPane.rowIndex="0" GridPane.columnSpan="4"
+        GridPane.halignment="CENTER">
+            <GridPane.margin>
+                <Insets top="0" bottom="5" right="0" left="0"/>
+            </GridPane.margin>
+        </Label>       
+        <Label text="Inventory Id: " GridPane.columnIndex="0" GridPane.rowIndex="1"
+        GridPane.halignment="RIGHT">
+            <GridPane.margin>
+                <Insets right="5" left="0" top="0" bottom="5"/>
+            </GridPane.margin>
+        </Label>
+        <TextField fx:id="invId"  GridPane.columnIndex="1" GridPane.rowIndex="1" 
+        editable="false">
+            <GridPane.margin>
+                <Insets bottom="5" left="0" top="0" right="0"/>
+            </GridPane.margin>
+        </TextField> 
+        <Label text="Item Name: " GridPane.columnIndex="0" GridPane.rowIndex="2"
+        GridPane.halignment="RIGHT">
+            <GridPane.margin>
+                <Insets right="5" left="0" top="0" bottom="5"/>
+            </GridPane.margin>
+        </Label>
+        <TextField fx:id="invname" GridPane.rowIndex="2" GridPane.columnSpan="5"
+        GridPane.columnIndex="1" editable="false">
+            <GridPane.margin>
+                <Insets bottom="5" left="0" top="0" right="0"/>
+            </GridPane.margin>
+        </TextField>
+        <Label text="Qty-On-Hand: " GridPane.columnIndex="0" GridPane.rowIndex="3"
+        GridPane.halignment="RIGHT">
+        </Label>
+        <TextField fx:id="invqty" GridPane.columnIndex="1" GridPane.rowIndex = "3"
+        editable="false">
+        </TextField>
+        <Label text="Re-order Point: " GridPane.columnIndex="2" GridPane.rowIndex="3"
+        GridPane.halignment="RIGHT"/>
+        <TextField fx:id="invrop" GridPane.columnIndex="3" GridPane.rowIndex="3"
+        editable="false"/>
+        <Label text="Sell Price: " GridPane.columnIndex="0" GridPane.rowIndex="4"
+        GridPane.halignment="RIGHT">
+            <GridPane.margin>
+                <Insets top="5" left="0" right="5" bottom="5"/>
+            </GridPane.margin>
+        </Label>
+        <TextField fx:id="invsp" GridPane.columnIndex="1" GridPane.rowIndex="4"
+        editable="false">
+            <GridPane.margin>
+                <Insets bottom="5" left="0" right="0" top="5"/>
+            </GridPane.margin>
+        </TextField>  
+       
+        <HBox GridPane.columnIndex="2" GridPane.rowIndex="5" GridPane.halignment="CENTER">
+            <GridPane.margin>
+                <Insets bottom="5" left="0" right="0" top="0"/>
+            </GridPane.margin>
+            <Button fx:id="btnadd" text="_ADD" 
+            mnemonicParsing="true" defaultButton="true">
+                <HBox.margin>
+                    <Insets right="3" top="0" left="0" bottom="0"/>
+                </HBox.margin>
+            </Button>
+            <Button fx:id="btnsave" text="_Save" disable="true"
+            mnemonicParsing="true">
+                <HBox.margin>
+                    <Insets right="3" top="0" left="0" bottom="0"/>
+                </HBox.margin>
+            </Button>
+            <Button fx:id ="btnorders" text="_Orders" 
+            mnemonicParsing="true">
+                <HBox.margin>
+                    <Insets right="8" top="0" left="0" bottom="0"/>
+                </HBox.margin>
+            </Button>
+            <Button fx:id="btnexit" text="_Exit" 
+            mnemonicParsing="true">
+            </Button>
+        </HBox> 
+        <VBox GridPane.rowIndex="6" GridPane.columnIndex="0" GridPane.columnSpan="5">
+            <ListView fx:id="lstInv" />
+            <Label fx:id="test" text="The output will be displayed here" />
+        </VBox>
+        
+                    
+    </children> 
+</GridPane>
